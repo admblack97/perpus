@@ -14,12 +14,23 @@
       <div class="row">
         <hr>
           <nav class="navbar">
-
             <ul class="nav navbar-nav">
-              <li><a href="{{ Route('tampil') }}">Data Anggota</a></li>
-              <li><a href="#">Keterangan</a></li>
-
+              <li><a href="{{ Route('tampil') }}">Data Penjualan</a></li>
+              <li><a href="{{ Route('create') }}">Tambah Data</a></li>
+              <li><a href="{{ Route('print') }}">Cetak</a></li>
             </ul>
+            <form class="" action="{{ Route('search') }}" method="get">
+              <div class="col-md-3" style="Float: right; margin-top: 7px;">
+                <div class="input-group custom-search-form">
+                  <input type="text" class="form-control" name="search" placeholder="Search...">
+                    <span class="input-group-btn">
+                      <span class="input-group-btn">
+                          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>Cari</button>
+                      </span>
+                    </span>
+                </div>
+              </div>
+            </form>
           </nav>
         <hr>
       </div>
@@ -27,9 +38,6 @@
         @yield('content')
       </div>
 
-      <div class="row">
-        <a href="#">Teknologi Informasi</a>
-      </div>
     </div>
 
 

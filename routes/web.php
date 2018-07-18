@@ -15,10 +15,12 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'DepanController@index');
-Route::get('/tampil', 'DepanController@tampil')->name('tampil');
-Route::get('create', 'DepanController@create')->name('create');
-Route::post('insert', 'DepanController@insert')->name('insert');
-Route::get('delete/{id}', 'DepanController@delete')->name('delete');
-Route::get('edit/{id}', 'DepanController@edit')->name('edit');
-Route::post('edit/{id}', 'DepanController@submitedit')->name('submitedit');
+Route::get('/', 'LaptopController@index');
+Route::get('/tampil', 'LaptopController@tampil')->name('tampil');
+Route::get('create', 'LaptopController@create')->name('create');
+Route::post('insert', 'LaptopController@insert')->name('insert');
+Route::get('delete/{id}', 'LaptopController@delete')->name('delete');
+Route::get('edit/{id}', 'LaptopController@edit')->name('edit');
+Route::post('edit/{id}', 'LaptopController@submitedit')->name('submitedit');
+Route::get('search', 'LaptopController@search')->name('search');
+Route::get('print', 'LaptopController@print')->name('print');
